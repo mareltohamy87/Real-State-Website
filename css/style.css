@@ -529,6 +529,7 @@ header #sidebar-active:checked ~ .sidenav {
   }
   .recently-added-section .bottom-contents .span-bottom-contents {
     gap: 30px;
+    display: flex;
   }
   .recently-added-section .recently-added-butn {
     text-align: center;
