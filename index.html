@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nest-home</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./imgs/logo.svg" />
+</head>
+
+<body>
+    <!----------- H E A D E R ------------>
+    <header>
+        <div class="container">
+            <div class="row d-flex justify-content-between align-items-center">
+                <div class="col-2">
+                    <a href="#">
+                        <img class="logo" src="./imgs/logo.svg" alt="logo" />
+                    </a>
+                </div>
+                <!--- Mobile label side menu --->
+                <label for="sidebar-active" class="d-lg-none">
+                    <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 0H0V2.18182H24V0Z" fill="#0B090A" />
+                        <path d="M24 9.81836H0V12.0002H24V9.81836Z" fill="#0B090A" />
+                        <path d="M24 19.6362H0V21.818H24V19.6362Z" fill="#0B090A" />
+                    </svg>
+                </label>
+
+                <nav class="nav-bar d-sm-none">
+                    <ul class="nav-list d-flex gap-32">
+                        <li class="list-item">
+                            <a class="active gray font " href="#">Home</a>
+                        </li>
+                        <li class="list-item">
+                            <a class="light-gray font" href="#">About us</a>
+                        </li>
+
+                        <!---- dropdwn menu ---->
+                        <li class="main-menu">
+                            <span>
+                                <a class="light-gray font d-flex gap-8" href="#">
+                                    Products
+                                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.571 13.3139L17.521 8.36388C17.6133 8.26837 17.7236 8.19219 17.8456 8.13978C17.9676 8.08737 18.0988 8.05979 18.2316 8.05863C18.3644 8.05748 18.4961 8.08278 18.619 8.13306C18.7419 8.18334 18.8535 8.25759 18.9474 8.35149C19.0413 8.44538 19.1156 8.55703 19.1658 8.67993C19.2161 8.80282 19.2414 8.9345 19.2403 9.06728C19.2391 9.20006 19.2115 9.33128 19.1591 9.45329C19.1067 9.57529 19.0305 9.68564 18.935 9.77788L13.278 15.4349C13.0905 15.6224 12.8362 15.7277 12.571 15.7277C12.3059 15.7277 12.0515 15.6224 11.864 15.4349L6.20702 9.77788C6.11151 9.68564 6.03533 9.57529 5.98292 9.45329C5.93051 9.33128 5.90292 9.20006 5.90177 9.06728C5.90062 8.9345 5.92592 8.80282 5.9762 8.67993C6.02648 8.55703 6.10073 8.44538 6.19463 8.35149C6.28852 8.25759 6.40017 8.18334 6.52307 8.13306C6.64596 8.08278 6.77764 8.05748 6.91042 8.05863C7.0432 8.05979 7.17442 8.08737 7.29643 8.13978C7.41843 8.19219 7.52877 8.26837 7.62102 8.36388L12.571 13.3139Z"
+                                            fill="#A1A1A1" />
+                                    </svg>
+                                </a>
+                            </span>
+                            <!----- sub-menu ----->
+                            <ul class="sub-menu">
+                                <li><a href="#">House</a></li>
+                                <li><a href="#">Village</a></li>
+                                <li><a href="#">Apartment</a></li>
+                                <li><a href="#">Chalets</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="list-item">
+                            <a class="light-gray font" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="buttons d-flex gap-16 d-sm-none col-auto">
+                    <a class="outline-a font gray d-flex justify-content-center align-items-center" href="#">Log In</a>
+                    <a class="solid-a font white d-flex justify-content-center align-items-center " href="#">Sign Up</a>
+                </div>
+
+            </div>
+
+        </div>
+        <!--- Mobile side menu --->
+        <input type="checkbox" id="sidebar-active" />
+        <label for="sidebar-active" class="overlay d-lg-none"></label>
+        <div class="sidenav d-lg-none">
+            <div class="d-flex flex-column justify-content-between gap-32">
+                <div class="d-flex flex-column justify-content-between">
+                    <div class="col-auto">
+                        <a href="#">
+                            <img src="./imgs/logo.svg" alt="logo" />
+                        </a>
+                    </div>
+                    <!---close button --->
+                    <label for="sidebar-active" class="d-md-none close-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M12 12.7082L6.75399 17.9542C6.66065 18.0476 6.54599 18.0976 6.40999 18.1042C6.27399 18.1109 6.15265 18.0609 6.04599 17.9542C5.93932 17.8476 5.88599 17.7296 5.88599 17.6002C5.88599 17.4709 5.93932 17.3529 6.04599 17.2462L11.292 12.0002L6.04599 6.75423C5.95265 6.6609 5.90265 6.54623 5.89599 6.41023C5.88932 6.27423 5.93932 6.1529 6.04599 6.04623C6.15265 5.93956 6.27065 5.88623 6.39999 5.88623C6.52932 5.88623 6.64732 5.93956 6.75399 6.04623L12 11.2922L17.246 6.04623C17.3393 5.9529 17.4543 5.9029 17.591 5.89623C17.7263 5.88956 17.8473 5.93956 17.954 6.04623C18.0607 6.1529 18.114 6.2709 18.114 6.40023C18.114 6.52956 18.0607 6.64756 17.954 6.75423L12.708 12.0002L17.954 17.2462C18.0473 17.3396 18.0973 17.4546 18.104 17.5912C18.1107 17.7266 18.0607 17.8476 17.954 17.9542C17.8473 18.0609 17.7293 18.1142 17.6 18.1142C17.4707 18.1142 17.3527 18.0609 17.246 17.9542L12 12.7082Z"
+                                fill="#2B2B2B" />
+                        </svg>
+                    </label>
+                </div>
+                <!--- nav bar mobile side menu --->
+                <nav class="nav-bar">
+                    <ul class="nav-list d-flex flex-column gap-32">
+                        <li class="list-item">
+                            <a class="active gray font " href="#">Home</a>
+                        </li>
+                        <li class="list-item">
+                            <a class="light-gray font" href="#">About us</a>
+                        </li>
+                        <!---- dropdwn menu ---->
+                        <li class="list-item">
+                            <a class="light-gray font d-flex" href="#">
+                                Products
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a class="light-gray font" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="buttons d-flex flex-column gap-16">
+                    <a class="outline-a font gray d-flex justify-content-center align-items-center" href="#">Log In</a>
+                    <a class="solid-a font white d-flex justify-content-center align-items-center " href="#">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!------ H E R O  S E C T I O N ---------->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-sm-12 col-md-6">
+                    <div class="hero-items">
+                        <h1 class="title-hero font heavygray ">
+                            Find Your Perfect Home With Ease
+                        </h1>
+                        <p class="hero-desc font heavygray  ">
+                            Explore a wide range of properties that suit your lifestyle, with detailed listings, expert
+                            advice, and seamless transactions. Start your journey to a new home today
+                        </p>
+                    </div>
+
+                    <div class="hero-buttons d-flex">
+                        <a class="solid-butn font white d-flex justify-content-center align-items-center"
+                            href="#">Buy</a>
+                        <a class="outline-butn font lighter-gray d-flex justify-content-center align-items-center"
+                            href="#">Rent</a>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-auto">
+                    <div class="hero-img">
+                        <img src="./imgs/hero-section.png" alt="house" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------ A B O U T  U S  S E C T I O N ---------->
+    <section class="about-us-section">
+        <div class="container">
+            <h2 class="title-about-us font heavygray text-align-center">
+                All You Need To Know About Us
+            </h2>
+            <p class="desc-about-us font heavygray text-align-center ">
+                At MyNest, we’re committed to helping you find your ideal property with expertise and integrity. Learn
+                about our journey and how we bring your real estate goals
+                to life
+            </p>
+
+            <div class="row justify-content-between align-items-center">
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <a href="#">
+                        <div class="items-about-us-section d-flex justify-content-center gap-16 flex-start">
+                            <div class="about-us-icon">
+                                <img src="./imgs/about-us-section/availables-properties.svg"
+                                    alt="availables-properties" />
+                            </div>
+
+                            <div class="about-us-feedback d-flex flex-column">
+                                <h3 class="title-about-us-feedback font heavygray">122+</h3>
+                                <p class="desc-about-us-feedback font gr-ay ">Available Properties</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <a href="#">
+                        <div class="items-about-us-section d-flex justify-content-center gap-16 flex-start">
+                            <div class="about-us-icon">
+                                <img src="./imgs/about-us-section/sold.svg" alt="properties-sold" />
+                            </div>
+
+                            <div class="about-us-feedback d-flex flex-column">
+                                <h3 class="title-about-us-feedback font heavygray ">122+</h3>
+                                <p class="desc-about-us-feedback font gr-ay">Available Properties</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <a href="#">
+                        <div class="items-about-us-section d-flex justify-content-center gap-16 flex-start">
+                            <div class="about-us-icon">
+                                <img src="./imgs/about-us-section/rented.svg" alt="properties-rented" />
+                            </div>
+
+                            <div class="about-us-feedback d-flex flex-column">
+                                <h3 class="title-about-us-feedback font heavygray">122+</h3>
+                                <p class="desc-about-us-feedback font gr-ay">Available Properties</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <a href="#">
+                        <div class="items-about-us-section d-flex justify-content-center gap-16 flex-start">
+                            <div class="about-us-icon">
+                                <img src="./imgs/about-us-section/happy-clients.svg" alt="happy-clients" />
+                            </div>
+
+                            <div class="about-us-feedback d-flex flex-column">
+                                <h3 class="title-about-us-feedback font heavygray  ">122+</h3>
+                                <p class="desc-about-us-feedback font gr-ay">Available Properties</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------ C L I E N T  S U C C E S S --------->
+    <section class="client-success-section">
+        <div class="container">
+            <span class="span font light-black text-align-center">SUCCESS PARTNERS</span>
+            <h4 class="title-client-success font heavygray  text-align-center">
+                We're proud of our clients' success and committed to providing the
+                best real estate solutions
+            </h4>
+            <div class="row justify-content-center ">
+
+                <div class="center-div col-sm-12 col-md-6 col-lg-4">
+                    <div class="items-client-success">
+                        <div class="top-content-client d-flex justify-content-center">
+                            <a class="d-flex gap-8" href="#">
+                                <img src="./imgs/client-success-section/green-space.svg" alt="green-space" />
+                                <h4 class="font gray d-flex align-items-center">Green Space Reality</h4>
+                            </a>
+                        </div>
+                        <div class="bottom-content-client">
+                            <p class="desc-bottom-client font heavygray text-align-center">
+                                Pioneers in eco-friendly properties comitted
+                                to sustainable living soutions for modern
+                                buyers.
+                            </p>
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./imgs/client-success-section/author-name.svg" alt="author-icon" />
+                                <h4 class="font heavygray">Author Name</h4>
+                                <p class="font heavygray">Emily Johnson</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="center-div col-sm-12 col-md-6 col-lg-4">
+                    <div class="items-client-success">
+                        <div class="top-content-client d-flex justify-content-center">
+                            <a class="d-flex gap-8" href="#">
+                                <img src="./imgs/client-success-section/skyline.svg" alt="green-space" />
+                                <h4 class="font gray d-flex align-items-center">Skyline Builders</h4>
+                            </a>
+                        </div>
+                        <div class="bottom-content-client">
+                            <p class="desc-bottom-client font heavygray text-align-center">
+                                Skyline Builders is recognized for creating
+                                spaces that redefine urban living with
+                                each new development
+                            </p>
+                            <div
+                                class=" bottom-base-client d-flex flex-column justify-content-center align-items-center">
+                                <img src="./imgs/client-success-section/author-name.svg" alt="author-icon" />
+                                <h4 class="font heavygray">Author Name</h4>
+                                <p class="font heavygray">John Smith</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="center-div col-sm-12 col-md-12 col-lg-4">
+                    <div class="items-client-success">
+                        <div class="top-content-client d-flex justify-content-center">
+                            <a class="d-flex gap-8" href="#">
+                                <img src="./imgs/client-success-section/green-space.svg" alt="green-space" />
+                                <h4 class="font gray d-flex align-items-center">Elite Property Group</h4>
+                            </a>
+                        </div>
+                        <div class="bottom-content-client">
+                            <p class="desc-bottom-client font heavygray text-align-center">
+                                Elite Property Group specializes in luxury real
+                                estate, offering exclusive properties and
+                                exceptional service to clients
+                            </p>
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="./imgs/client-success-section/author-name.svg" alt="author-icon" />
+                                <h4 class="font heavygray">Author Name</h4>
+                                <p class="font heavygray">David Brown</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------ R E C E N T L Y  A D E D D   S E C T I O N --------->
+    <section class="recently-added-section">
+        <div class="container">
+            <div class="desc-arrow row d-flex justify-content-between">
+                <div class="col-lg-auto">
+                    <h4 class="title-recently-added font gray">Recently Added</h4>
+                </div>
+
+                <div class="d-flex col-sm-auto col-lg-auto gap-4 align-items-center">
+                    <p class="desc-recently-added font gray">Show More</p>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2.55994 8.00006C2.55994 4.99206 4.99194 2.56006 7.99994 2.56006C11.0079 2.56006 13.4399 4.99206 13.4399 8.00006C13.4399 11.0081 11.0079 13.4401 7.99994 13.4401C4.99194 13.4401 2.55994 11.0081 2.55994 8.00006ZM12.7999 8.00006C12.7999 5.34406 10.6559 3.20006 7.99994 3.20006C5.34394 3.20006 3.19994 5.34406 3.19994 8.00006C3.19994 10.6561 5.34394 12.8001 7.99994 12.8001C10.6559 12.8001 12.7999 10.6561 12.7999 8.00006Z"
+                            fill="#455A64" />
+                        <path
+                            d="M7.45606 10.656L10.1121 8L7.45606 5.344L7.90406 4.896L11.0081 8L7.90406 11.104L7.45606 10.656Z"
+                            fill="#455A64" />
+                        <path d="M10.5601 7.67993V8.31993L5.12006 8.31993V7.67993L10.5601 7.67993Z" fill="#455A64" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="row d-flex justify-content-between">
+
+                <div class="col-sm-12 col-md-4 col-lg-3">
+                    <img class="img" src="./imgs/recently-added-section/Zamalek-1.png" alt="" />
+
+                    <div class="top-contents">
+                        <h3 class="font black ">Downtown Cairo-Zamalek</h3>
+                        <p class="font black">Modern 2-bedroom apartment in a prime location with city views</p>
+                    </div>
+
+                    <div class="bottom-contents d-flex justify-content-between">
+                        <span class="font gray">$25,000</span>
+                        <p class="span-bottom-contents d-flex font medium-gray ">
+                            <span class="black"> 360m² </span>
+                            Living Area
+                        </p>
+                    </div>
+
+                    <div class="recently-added-butn">
+                        <a class="outline-butn font gray d-flex justify-content-center align-items-center"
+                            href="#">Buy</a>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 col-lg-3">
+                    <img class="img" src="./imgs/recently-added-section/Zamalek-2.png" alt="" />
+
+                    <div class="top-contents">
+                        <h3 class="font black ">Downtown Cairo-Zamalek</h3>
+                        <p class="font black">Modern 2-bedroom apartment in a prime location with city views</p>
+                    </div>
+
+                    <div class="bottom-contents d-flex justify-content-between">
+                        <span class="font gray">$25,000</span>
+                        <p class="span-bottom-contents d-flex font medium-gray ">
+                            <span class="black"> 360m² </span>
+                            Living Area
+                        </p>
+                    </div>
+
+                    <div class="recently-added-butn">
+                        <a class="outline-butn font gray d-flex justify-content-center align-items-center"
+                            href="#">Buy</a>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 col-lg-3">
+                    <img class="img" src="./imgs/recently-added-section/Zamalek-3.png" alt="" />
+
+                    <div class="top-contents">
+                        <h3 class="font black ">Downtown Cairo-Zamalek</h3>
+                        <p class="font black">Modern 2-bedroom apartment in a prime location with city views</p>
+                    </div>
+
+                    <div class="bottom-contents d-flex justify-content-between">
+                        <span class="font gray">$25,000</span>
+                        <p class="span-bottom-contents d-flex font medium-gray ">
+                            <span class="black"> 360m² </span>
+                            Living Area
+                        </p>
+                    </div>
+
+                    <div class="recently-added-butn">
+                        <a class="outline-butn font gray d-flex justify-content-center align-items-center"
+                            href="#">Rent</a>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 col-lg-3">
+                    <img class="img" src="./imgs/recently-added-section/Zamalek-4.png" alt="" />
+
+                    <div class="top-contents">
+                        <h3 class="font black ">Downtown Cairo-Zamalek</h3>
+                        <p class="font black">Modern 2-bedroom apartment in a prime location with city views</p>
+                    </div>
+
+                    <div class="bottom-contents d-flex justify-content-between">
+                        <span class="font gray">$25,000</span>
+                        <p class="span-bottom-contents font medium-gray ">
+                            <span class="black"> 360m² </span>
+                            Living Area
+                        </p>
+                    </div>
+
+                    <div class="recently-added-butn">
+                        <a class="outline-butn font gray d-flex justify-content-center align-items-center"
+                            href="#">Rent</a>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 col-lg-3">
+                    <img class="img" src="./imgs/recently-added-section/Zamalek-5.png" alt="" />
+
+                    <div class="top-contents">
+                        <h3 class="font black ">Downtown Cairo-Zamalek</h3>
+                        <p class="font black">Modern 2-bedroom apartment in a prime location with city views</p>
+                    </div>
+
+                    <div class="bottom-contents d-flex justify-content-between">
+                        <span class="font gray">$25,000</span>
+                        <p class="span-bottom-contents d-flex font medium-gray ">
+                            <span class="black"> 360m² </span>
+                            Living Area
+                        </p>
+                    </div>
+
+                    <div class="recently-added-butn">
+                        <a class="outline-butn font gray d-flex justify-content-center align-items-center"
+                            href="#">Buy</a>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 col-lg-3">
+                    <img class="img" src="./imgs/recently-added-section/Zamalek-6.png" alt="" />
+
+                    <div class="top-contents">
+                        <h3 class="font black ">Downtown Cairo-Zamalek</h3>
+                        <p class="font black">Modern 2-bedroom apartment in a prime location with city views</p>
+                    </div>
+
+                    <div class="bottom-contents d-flex justify-content-between">
+                        <span class="font gray">$25,000</span>
+                        <p class="span-bottom-contents d-flex font medium-gray ">
+                            <span class="black"> 360m² </span>
+                            Living Area
+                        </p>
+                    </div>
+
+                    <div class="recently-added-butn">
+                        <a class="outline-butn font gray d-flex justify-content-center align-items-center"
+                            href="#">Buy</a>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <img class="img" src="./imgs/recently-added-section/Zamalek-7.png" alt="" />
+
+                    <div class="top-contents">
+                        <h3 class="font black ">Downtown Cairo-Zamalek</h3>
+                        <p class="span-bottom-contents d-flex font black">Modern 2-bedroom apartment in a prime location
+                            with city views</p>
+                    </div>
+
+                    <div class="bottom-contents d-flex justify-content-between">
+                        <span class="font gray">$25,000</span>
+                        <p class="span-bottom-contents d-flex font medium-gray ">
+                            <span class="black"> 360m² </span>
+                            Living Area
+                        </p>
+                    </div>
+
+                    <div class="recently-added-butn">
+                        <a class="outline-butn font gray d-flex justify-content-center align-items-center"
+                            href="#">Rent</a>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <img class="img" src="./imgs/recently-added-section/Zamalek-8.png" alt="" />
+
+                    <div class="top-contents">
+                        <h3 class="font black ">Downtown Cairo-Zamalek</h3>
+                        <p class="font black">Modern 2-bedroom apartment in a prime location with city views</p>
+                    </div>
+
+                    <div class="bottom-contents d-flex justify-content-between">
+                        <span class="font gray">$25,000</span>
+                        <p class="span-bottom-contents d-flex font medium-gray ">
+                            <span class="black"> 360m² </span>
+                            Living Area
+                        </p>
+                    </div>
+
+                    <div class="recently-added-butn">
+                        <a class="outline-butn font gray d-flex justify-content-center align-items-center" href="#">
+                            Rent
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------- C O N T A C T   U S   S E C T I O N --------->
+    <section class="contact-us-section">
+        <div class="container">
+            <div class="items-contact-us col-lg-12">
+                <h2 class="font light-black">CONTACT US</h2>
+                <P class="font heavygray">
+                    We have the best engineers and experts in the world, and we are working in the
+                    best designs that suit the modern era
+                </P>
+            </div>
+
+            <div class="buttons d-flex gap-16 col-lg-6">
+                <a class="solid-butn font white d-flex justify-content-center align-items-center" href="#">Contact
+                    Us</a>
+                <a class="outline-butn font gray d-flex justify-content-center align-items-center" href="#">Read
+                    More</a>
+            </div>
+        </div>
+    </section>
+
+    <!------- S U B S C R I B E   N E W   S E C T I O N --------->
+    <section class="subscribe-new-section">
+        <div class="container">
+            <div class="row justify-content-between">
+
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <div class="items-subscribe d-flex flex-column justify-content-center">
+                        <h2 class="font heavygray">Subscribe to The New</h2>
+                        <p class="font heavygray">To know all that is new, subscribe to receive all new offers and
+                            discounts </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-12 col-lg-5">
+                    <form class="form-items gap-16 d-flex align-items-center">
+                        <input class="font gray d-flex align-items-center" type="email" name="email"
+                            autocomplete="email" placeholder="Enter Your Email" />
+                        <button class="font white d-flex align-items-center" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------- F O O T E R  --------->
+    <footer class="footer">
+        <div class="container">
+            <div class="row justify-content-between gap-48 ">
+
+                <div class="col-2 footer-logo ">
+                    <a href="#">
+                        <img src="./imgs/footer/logo.svg" alt="logo" />
+                    </a>
+                </div>
+
+                <div class="footer-list-item col-lg-auto d-flex flex-column">
+                    <ul class="ul-footer-list-item d-flex gap-32 d-sm-none">
+                        <li>
+                            <a class="font white" href="#">Home</a>
+                        </li>
+                        <li>
+                            <a class="font white" href="#">About</a>
+                        </li>
+                        <li>
+                            <a class="font white" href="#">Products</a>
+                        </li>
+                        <li>
+                            <a class="font white" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+
+                    <p class="font white text-align-center">MyNest @ 202X. All rights reserved.</p>
+                </div>
+
+                <div class="col-lg-auto ">
+                    <ul class="d-flex gap-16 ul-icons">
+                        <li>
+                            <a href="#">
+                                <img src="./imgs/footer/youtube.svg" alt="youtube-icon" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./imgs/footer/facebook.svg" alt="youtube-icon" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./imgs/footer/twitter.svg" alt="youtube-icon" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./imgs/footer/linkdin.svg" alt="youtube-icon" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
