@@ -328,7 +328,7 @@ header #sidebar-active:checked ~ .sidenav {
   transition: all ease-in-out 0.3s;
 }
 .about-us-section .items-about-us-section:hover {
-  border: 2px solid #455A64;
+  border: 1px solid #455A64;
   cursor: pointer;
 }
 .about-us-section .items-about-us-section .about-us-feedback .title-about-us-feedback {
@@ -343,15 +343,20 @@ header #sidebar-active:checked ~ .sidenav {
 }
 @media (max-width: 767px) {
   .about-us-section .row {
-    justify-content: center;
     text-align: center;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1110px) {
   .about-us-section .items-about-us-section {
     margin-bottom: 80px;
     max-width: 302px;
     min-height: 80px;
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 767px) and (max-width: 1109px) {
+  .about-us-section .about-us-div {
+    width: 50%;
   }
 }
 
@@ -383,7 +388,7 @@ header #sidebar-active:checked ~ .sidenav {
   margin-bottom: 32px;
 }
 .client-success-section .items-client-success:hover {
-  border: 2px solid #21272A;
+  border: 1px solid #21272A;
   cursor: pointer;
 }
 .client-success-section .items-client-success .top-content-client {
@@ -450,54 +455,73 @@ header #sidebar-active:checked ~ .sidenav {
   cursor: pointer;
   transform: rotate(90deg);
 }
+
+.img {
+  border: 1px solid transparent;
+}
+.img:hover {
+  border: 1px solid #455A64;
+  cursor: pointer;
+}
+
 @media (max-width: 900px) {
-  .recently-added-section .title-recently-added {
+  .title-recently-added {
     font-size: 15px;
   }
-  .recently-added-section .desc-arrow {
+  .desc-arrow {
     flex-wrap: nowrap;
   }
 }
-.recently-added-section .img {
+.img {
   width: 100%;
   display: block;
 }
-.recently-added-section .top-contents h3 {
+
+.top-contents h3 {
   font-size: 20px;
   font-weight: 700;
   line-height: 22px;
   padding-top: 16px;
   padding-bottom: 8px;
 }
-.recently-added-section .top-contents p {
+.top-contents p {
   font-size: 14px;
   font-weight: 400;
   line-height: 15px;
   padding-bottom: 25px;
 }
-.recently-added-section .bottom-contents {
+
+.bottom-contents {
   padding-bottom: 24px;
 }
-.recently-added-section .bottom-contents span {
+.bottom-contents span {
   font-size: 20px;
   font-weight: 700;
   line-height: 22px;
 }
-.recently-added-section .bottom-contents p {
+.bottom-contents p {
   font-size: 18px;
   font-weight: 400;
   line-height: 19px;
 }
+
 @media (max-width: 1200px) {
-  .recently-added-section .bottom-contents {
+  .bottom-contents {
     flex-direction: column;
     gap: 20px;
+    text-align: center;
+  }
+  h3 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
   }
 }
-.recently-added-section .recently-added-butn {
+.recently-added-butn {
   padding-bottom: 16px;
 }
-.recently-added-section .recently-added-butn .outline-butn {
+.recently-added-butn .outline-butn {
   width: 100%;
   height: 48px;
   font-size: 18px;
@@ -506,36 +530,36 @@ header #sidebar-active:checked ~ .sidenav {
   border: 1px solid #455A64;
   transition: all ease-in-out 0.3s;
 }
-.recently-added-section .recently-added-butn .outline-butn:hover {
+.recently-added-butn .outline-butn:hover {
   color: #FFF;
   background-color: #455A64;
 }
-@media (min-width: 768px) {
-  .recently-added-section .recently-added-butn .outline-butn {
+@media (min-width: 900px) {
+  .recently-added-butn .outline-butn {
     max-width: 305px;
     height: 48px;
   }
 }
+
 @media (max-width: 767px) {
-  .recently-added-section .row {
+  .row {
     align-items: center;
     justify-content: center;
   }
-  .recently-added-section .top-contents {
+  .top-contents {
     text-align: center;
   }
-  .recently-added-section .bottom-contents {
+  .bottom-contents {
     align-items: center;
   }
-  .recently-added-section .bottom-contents .span-bottom-contents {
+  .bottom-contents .span-bottom-contents {
     gap: 30px;
     display: flex;
   }
-  .recently-added-section .recently-added-butn {
+  .recently-added-butn {
     text-align: center;
   }
 }
-
 /*________________ C O N T A C T   U S   S E C T I O N _______________*/
 .contact-us-section {
   background-color: #FFF;
@@ -606,8 +630,6 @@ header #sidebar-active:checked ~ .sidenav {
   }
   .contact-us-section .buttons {
     justify-content: center;
-    display: flex;
-    width: 100%;
   }
 }
 
@@ -637,8 +659,8 @@ header #sidebar-active:checked ~ .sidenav {
   border: 0.6px solid #21272A;
 }
 .subscribe-new-section .form-items input:hover {
-  color: #FFF;
-  background-color: #455A64;
+  border: 0.6px solid #21272A;
+  cursor: pointer;
 }
 .subscribe-new-section .form-items button {
   font-size: 20px;
@@ -654,6 +676,25 @@ header #sidebar-active:checked ~ .sidenav {
   background-color: #FFF;
   border: 0.6px solid #21272A;
 }
+@media (min-width: 786px) {
+  .subscribe-new-section .form-items input {
+    max-width: 370px;
+    height: 56px;
+    justify-content: center;
+    display: flex;
+  }
+  .subscribe-new-section .form-items button {
+    max-width: 126px;
+    height: 56px;
+    justify-content: center;
+    display: flex;
+  }
+}
+@media (max-width: 786px) {
+  .subscribe-new-section .form-items button {
+    justify-content: center;
+  }
+}
 @media (max-width: 1300px) {
   .subscribe-new-section .row {
     flex-direction: column;
@@ -661,6 +702,12 @@ header #sidebar-active:checked ~ .sidenav {
   }
   .subscribe-new-section form {
     justify-content: center;
+  }
+  .subscribe-new-section .items-subscribe h2 {
+    text-align: center;
+  }
+  .subscribe-new-section .items-subscribe p {
+    text-align: center;
   }
 }
 @media (min-width: 1300px) {
@@ -678,24 +725,6 @@ header #sidebar-active:checked ~ .sidenav {
   }
   .subscribe-new-section p {
     text-align: center;
-  }
-}
-@media (max-width: 1300px) {
-  .subscribe-new-section .items-subscribe h2 {
-    text-align: center;
-  }
-  .subscribe-new-section .items-subscribe p {
-    text-align: center;
-  }
-}
-@media (min-width: 786px) {
-  .subscribe-new-section .form-items input {
-    max-width: 370px;
-    height: 56px;
-  }
-  .subscribe-new-section .form-items button {
-    max-width: 126px;
-    height: 56px;
   }
 }
 

@@ -438,7 +438,7 @@ header {
         transition: all ease-in-out 0.3s;
 
         &:hover {
-            border: 2px solid $gray;
+            border: 1px solid $gray;
             cursor: pointer;
         }
 
@@ -459,16 +459,22 @@ header {
 
     @media (max-width:767px) {
         .row {
-            justify-content: center;
             text-align: center;
         }
     }
 
-    @media (min-width:768px) {
+    @media (min-width:1110px) {
         .items-about-us-section {
             margin-bottom: 80px;
             max-width: 302px;
             min-height: 80px;
+            justify-content: flex-start;
+        }
+    }
+
+    @media (min-width:767px) and (max-width:1109px) {
+        .about-us-div {
+            width: 50%;
         }
     }
 }
@@ -505,7 +511,7 @@ header {
         margin-bottom: 32px;
 
         &:hover {
-            border: 2px solid $heavygray;
+            border: 1px solid $heavygray;
             cursor: pointer;
         }
 
@@ -591,112 +597,131 @@ header {
             transform: rotate(90deg);
         }
     }
+}
 
-    @media (max-width:900px) {
-        .title-recently-added {
-            font-size: 15px;
-        }
+.img {
+    border: 1px solid transparent;
 
-        .desc-arrow {
-            flex-wrap: nowrap;
+    &:hover {
+        border: 1px solid $gray;
+        cursor: pointer;
+    }
+}
+
+@media (max-width:900px) {
+    .title-recently-added {
+        font-size: 15px;
+    }
+
+    .desc-arrow {
+        flex-wrap: nowrap;
+    }
+}
+
+.img {
+    width: 100%;
+    display: block;
+}
+
+.top-contents {
+    h3 {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 22px;
+        padding-top: 16px;
+        padding-bottom: 8px;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 15px;
+        padding-bottom: 25px;
+    }
+}
+
+.bottom-contents {
+    padding-bottom: 24px;
+
+    span {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 22px;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 19px;
+    }
+}
+
+@media (max-width:1200px) {
+    .bottom-contents {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+}
+
+.recently-added-butn {
+    padding-bottom: 16px;
+
+    .outline-butn {
+        width: 100%;
+        height: 48px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 19px;
+        border: 1px solid $gray;
+        transition: all ease-in-out 0.3s;
+
+        &:hover {
+            color: $white;
+            background-color: $gray;
         }
     }
 
-    .img {
-        width: 100%;
-        display: block;
+    @media (min-width:900px) {
+        .outline-butn {
+            max-width: 305px;
+            height: 48px;
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .row {
+        align-items: center;
+        justify-content: center;
     }
 
     .top-contents {
-        h3 {
-            font-size: 20px;
-            font-weight: 700;
-            line-height: 22px;
-            padding-top: 16px;
-            padding-bottom: 8px;
-        }
-
-        p {
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 15px;
-            padding-bottom: 25px;
-        }
+        text-align: center;
     }
 
     .bottom-contents {
-        padding-bottom: 24px;
+        align-items: center;
 
-        span {
-            font-size: 20px;
-            font-weight: 700;
-            line-height: 22px;
-        }
-
-        p {
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 19px;
-        }
-    }
-
-    @media (max-width:1200px) {
-        .bottom-contents {
-            flex-direction: column;
-            gap: 20px;
+        .span-bottom-contents {
+            gap: 30px;
+            display: flex;
         }
     }
 
     .recently-added-butn {
-        padding-bottom: 16px;
-
-        .outline-butn {
-            width: 100%;
-            height: 48px;
-            font-size: 18px;
-            font-weight: 700;
-            line-height: 19px;
-            border: 1px solid $gray;
-            transition: all ease-in-out 0.3s;
-
-            &:hover {
-                color: $white;
-                background-color: $gray;
-            }
-        }
-
-        @media (min-width:768px) {
-            .outline-butn {
-                max-width: 305px;
-                height: 48px;
-            }
-        }
-    }
-
-    @media (max-width:767px) {
-        .row {
-            align-items: center;
-            justify-content: center;
-        }
-
-        .top-contents {
-            text-align: center;
-        }
-
-        .bottom-contents {
-            align-items: center;
-
-            .span-bottom-contents {
-                gap: 30px;
-                display:flex;
-            }
-        }
-
-        .recently-added-butn {
-            text-align: center;
-        }
+        text-align: center;
     }
 }
+
 
 /*________________ C O N T A C T   U S   S E C T I O N _______________*/
 .contact-us-section {
@@ -779,8 +804,6 @@ header {
 
         .buttons {
             justify-content: center;
-            display: flex;
-            width: 100%;
         }
     }
 }
@@ -818,8 +841,8 @@ header {
             border: 0.6px solid $heavygray;
 
             &:hover {
-                color: $white;
-                background-color: $gray;
+                border: 0.6px solid $heavygray;
+                cursor: pointer;
             }
         }
 
@@ -840,6 +863,28 @@ header {
         }
     }
 
+    @media (min-width:786px) {
+        .form-items input {
+            max-width: 370px;
+            height: 56px;
+            justify-content: center;
+            display: flex;
+        }
+
+        .form-items button {
+            max-width: 126px;
+            height: 56px;
+            justify-content: center;
+            display: flex;
+        }
+    }
+
+    @media (max-width:786px) {
+        .form-items button {
+            justify-content: center;
+        }
+    }
+
     @media (max-width:1300px) {
         .row {
             flex-direction: column;
@@ -848,6 +893,17 @@ header {
 
         form {
             justify-content: center;
+        }
+
+        .items-subscribe {
+            h2 {
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+            }
+
         }
     }
 
@@ -869,32 +925,6 @@ header {
 
         p {
             text-align: center;
-        }
-    }
-
-    @media (max-width:1300px) {
-        .items-subscribe {
-            h2 {
-                text-align: center;
-            }
-
-            p {
-                text-align: center;
-            }
-
-        }
-
-    }
-
-    @media (min-width:786px) {
-        .form-items input {
-            max-width: 370px;
-            height: 56px;
-        }
-
-        .form-items button {
-            max-width: 126px;
-            height: 56px;
         }
     }
 }
