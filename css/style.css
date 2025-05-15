@@ -540,26 +540,26 @@ header #sidebar-active:checked ~ .sidenav {
     height: 48px;
   }
 }
-
 @media (max-width: 767px) {
-  .row {
+  .recently-added-butn .row {
     align-items: center;
     justify-content: center;
   }
-  .top-contents {
+  .recently-added-butn .top-contents {
     text-align: center;
   }
-  .bottom-contents {
+  .recently-added-butn .bottom-contents {
     align-items: center;
   }
-  .bottom-contents .span-bottom-contents {
+  .recently-added-butn .bottom-contents .span-bottom-contents {
     gap: 30px;
     display: flex;
   }
-  .recently-added-butn {
+  .recently-added-butn .recently-added-butn {
     text-align: center;
   }
 }
+
 /*________________ C O N T A C T   U S   S E C T I O N _______________*/
 .contact-us-section {
   background-color: #FFF;

@@ -696,31 +696,32 @@ header {
             height: 48px;
         }
     }
-}
-
-@media (max-width:767px) {
-    .row {
-        align-items: center;
-        justify-content: center;
-    }
-
-    .top-contents {
-        text-align: center;
-    }
-
-    .bottom-contents {
-        align-items: center;
-
-        .span-bottom-contents {
-            gap: 30px;
-            display: flex;
+    @media (max-width:767px) {
+        .row {
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .top-contents {
+            text-align: center;
+        }
+    
+        .bottom-contents {
+            align-items: center;
+    
+            .span-bottom-contents {
+                gap: 30px;
+                display: flex;
+            }
+        }
+    
+        .recently-added-butn {
+            text-align: center;
         }
     }
-
-    .recently-added-butn {
-        text-align: center;
-    }
 }
+
+
 
 
 /*________________ C O N T A C T   U S   S E C T I O N _______________*/
