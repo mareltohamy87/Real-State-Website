@@ -599,15 +599,6 @@ header {
     }
 }
 
-.img {
-    border: 1px solid transparent;
-
-    &:hover {
-        border: 1px solid $gray;
-        cursor: pointer;
-    }
-}
-
 @media (max-width:900px) {
     .title-recently-added {
         font-size: 15px;
@@ -621,6 +612,12 @@ header {
 .img {
     width: 100%;
     display: block;
+    border: 1px solid transparent;
+
+    &:hover {
+        border: 1px solid $gray;
+        cursor: pointer;
+    }
 }
 
 .top-contents {
@@ -696,25 +693,26 @@ header {
             height: 48px;
         }
     }
+
     @media (max-width:767px) {
         .row {
             align-items: center;
             justify-content: center;
         }
-    
+
         .top-contents {
             text-align: center;
         }
-    
+
         .bottom-contents {
             align-items: center;
-    
+
             .span-bottom-contents {
                 gap: 30px;
                 display: flex;
             }
         }
-    
+
         .recently-added-butn {
             text-align: center;
         }

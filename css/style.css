@@ -456,14 +456,6 @@ header #sidebar-active:checked ~ .sidenav {
   transform: rotate(90deg);
 }
 
-.img {
-  border: 1px solid transparent;
-}
-.img:hover {
-  border: 1px solid #455A64;
-  cursor: pointer;
-}
-
 @media (max-width: 900px) {
   .title-recently-added {
     font-size: 15px;
@@ -475,6 +467,11 @@ header #sidebar-active:checked ~ .sidenav {
 .img {
   width: 100%;
   display: block;
+  border: 1px solid transparent;
+}
+.img:hover {
+  border: 1px solid #455A64;
+  cursor: pointer;
 }
 
 .top-contents h3 {
