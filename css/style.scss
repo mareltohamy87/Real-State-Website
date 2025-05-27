@@ -520,8 +520,10 @@ header {
             padding-bottom: 16px;
 
             h4 {
-                font-size: 24px;
-                font-weight: 700;
+                font: {
+                    size:24px;
+                    weight:700;
+                }
                 line-height: 26px;
             }
         }
@@ -535,6 +537,7 @@ header {
                 padding-bottom: 32px;
             }
 
+           
             img {
                 width: 48px;
                 height: 48px;
@@ -554,12 +557,7 @@ header {
             }
         }
     }
-
-    .center-div {
-        display: flex;
-        flex: 1 1 350px;
-    }
-
+    
     @media (max-width:1079px) {
         .center-div {
             display: flex;

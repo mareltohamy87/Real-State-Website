@@ -422,10 +422,6 @@ header #sidebar-active:checked ~ .sidenav {
   font-weight: 400;
   line-height: 25px;
 }
-.client-success-section .center-div {
-  display: flex;
-  flex: 1 1 350px;
-}
 @media (max-width: 1079px) {
   .client-success-section .center-div {
     display: flex;
