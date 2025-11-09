@@ -1,6 +1,5 @@
 🚀 New Project: MyNest – Real Estate Landing Page
-Project: MyNest — Real-estate Landing Page
-Role: Front-End Developer (project by me during Route Academy)
+
 Overview:
 MyNest is a clean, modern landing page for a real-estate service. It showcases the hero area (Buy / Rent CTAs), company highlights, client success stories, a “Recently Added” grid of properties, a contact/subscribe section, and a footer with social links.
 
