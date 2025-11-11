@@ -61,5 +61,5 @@ Focus on accessibility and performance (minimal JS, optimised layout).
 
 ## 📸 Preview
 You can view the live demo here:  
-👉 *(https://lnkd.in/e72eu6N8)*
+👉 *(https://mareltohamy87.github.io/Real-State-Website/)*
 
