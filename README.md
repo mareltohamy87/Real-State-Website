@@ -58,3 +58,8 @@ Implemented CSS-only mobile side menu (checkbox + overlay).
 Designed reusable card components for property listings.
 
 Focus on accessibility and performance (minimal JS, optimised layout).
+
+## 📸 Preview
+You can view the live demo here:  
+👉 *(https://lnkd.in/e72eu6N8)*
+
